@@ -3,17 +3,17 @@ import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import NavBar from "./Pages/NavBar";
-import Contact from "./Pages/Contact";
+import Contact from "./Pages/FORM";
+import Hero from "./Pages/Hero";
 function App() {
   return (
     <BrowserRouter>
-      <h1 className="text-center text-3xl text-teal-100 font-mono p-4 bg-slate-800 shadow-md">
-        SuccessFully Cloning Done
-      </h1>
+      <NavBar />
       <Routes>
-        <Route path="/" element={<NavBar />} />
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/hero" element={<Hero />} />
+        <Route path="/call" element={<Contact />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
